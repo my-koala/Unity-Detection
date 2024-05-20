@@ -1,10 +1,3 @@
-/*************************************************/
-/* Detectable2D.cs                               */
-/* Project: Game Mechanic - Detection (2D)       */
-/* Author: James Brusewitz (valedict0)           */
-/* Date Completed: 5/19/2024                     */
-/*************************************************/
-
 using UnityEngine.Events;
 using UnityEngine;
 

@@ -1,10 +1,3 @@
-/*************************************************/
-/* Detection/Detector2D.cs                       */
-/* Project: Game Mechanic - Detection (2D)       */
-/* Author: James Brusewitz (valedict0)           */
-/* Date Completed: 5/19/2024                     */
-/*************************************************/
-
 // Notes: Detector2D only detects other game objects with a Detectable2D component.
 // Transform rotation z component rotates vision direction.
 
@@ -108,6 +101,11 @@ namespace Detection
                     continue;// Skip colliders that are not detectables.
                 }
                 
+                if (!detectable.isActiveAndEnabled)
+                {
+                    continue;// Skipping inactive/disabled detectables.
+                }
+
                 // Find collider direction and angle to detectable.
                 Vector2 detectableDirection = detectable.transform.position - transform.position;
                 float visionRotationZ = transform.rotation.eulerAngles.z;
